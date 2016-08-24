@@ -6,7 +6,7 @@
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>pom</packaging>
 	<modules>
-		<module>spring.boot.demo.simple</module>
+	<module>spring.boot.demo.simple</module>
 	</modules>
 
 	<parent>
@@ -16,7 +16,6 @@
 	</parent>
 
 	<dependencies>
-
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>

@@ -1,4 +1,4 @@
-package spring.boot.demo.simple;
+package com.swj;
 
 import org.springframework.boot.*;
 import org.springframework.boot.autoconfigure.*;
