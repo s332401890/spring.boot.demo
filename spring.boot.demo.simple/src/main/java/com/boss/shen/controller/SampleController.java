@@ -1,21 +1,21 @@
-package com.boss.shen;
+package com.boss.shen.controller;
 
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.*;
 import org.springframework.boot.autoconfigure.*;
 import org.springframework.stereotype.*;
 import org.springframework.web.bind.annotation.*;
 
 @Controller
-@EnableAutoConfiguration
 public class SampleController {
 
+	@Value("${webapp.name}")
+	private String webappName;
+	
     @RequestMapping("/")
     @ResponseBody
-    String home() {
-        return "Hello World!";
+    String test() {
+        return webappName;
     }
 
-    public static void main(String[] args) throws Exception {
-        SpringApplication.run(SampleController.class, args);
-    }
 }
