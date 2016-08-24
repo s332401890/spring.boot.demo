@@ -7,15 +7,19 @@ import org.springframework.stereotype.*;
 import org.springframework.web.bind.annotation.*;
 
 @Controller
+@RequestMapping("${webapp.contextpath}")
 public class SampleController {
 
 	@Value("${webapp.name}")
 	private String webappName;
 	
-    @RequestMapping("/")
-    @ResponseBody
+	@Value("${webapp.contextpath}")
+	private String contextPath;
+	
+    @RequestMapping("/test")
+    @ResponseBody	
     String test() {
-        return webappName;
+        return webappName + contextPath;
     }
 
 }
